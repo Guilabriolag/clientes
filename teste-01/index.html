@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://labriolag.shop/shared-components/global-lab.css">
+    <title>Labriolag | Carregando...</title>
+    <link rel="stylesheet" href="https://guilabriolag.github.io/001/shared-components/global-lab.css">
 </head>
 <body style="background:#000">
     <div id="app"></div>
-    <script src="https://labriolag.shop/shared-components/scripts/lab-shield.js"></script>
+
+    <script src="https://guilabriolag.github.io/001/shared-components/scripts/lab-shield.js"></script>
     <script>
+        // O ID deve ser o mesmo que você usou no Packer
         checkLabLicense("TESTE-01").then(ok => {
             if(ok) {
+                console.log("Licença OK! Chamando motor...");
                 const s = document.createElement('script');
-                s.src = "https://labriolag.shop/Lab_Menu/engine/render.js";
+                s.src = "https://guilabriolag.github.io/001/Lab_Menu/engine/render.js";
                 document.body.appendChild(s);
             }
         });
